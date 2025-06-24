@@ -16,11 +16,43 @@
         </nav>
     </header>
     <main>
+    <div style="text-align: right; padding: 0 1rem;">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <div id="quote-box" style="text-align:center; font-style:italic; margin-bottom: 2rem;">
+        <p id="quote">"Initializing neural uplink..."</p>
+    </div>
+    <div style="text-align:center; margin-bottom: 2rem;">
+        <iframe
+            src="https://player.twitch.tv/?channel=ferocitykk&parent=ferocitykk.github.io"
+            height="300"
+            width="500"
+            allowfullscreen>
+        </iframe>
+    </div>
+
         <h2>Welcome to ATLAS</h2>
         <p>This site documents the ATLAS V1: Glitched Core project – a modular AI Twitch bot with voice, memory, and multi-game support.</p>
     </main>
     <footer>
         <p>Made by Ferocitykk | Hosted on GitHub Pages</p>
     </footer>
+<script>
+    const quotes = [
+        '"Initializing neural uplink..."',
+        '"Connection to mainframe secure."',
+        '"Awaiting command input..."',
+        '"404 not found? Not my problem."',
+        '"All systems online, Choom."'
+    ];
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+    function rotateQuote() {
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerText = quote;
+    }
+    setInterval(rotateQuote, 4000);
+</script>
 </body>
 </html>

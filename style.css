@@ -24,3 +24,23 @@ footer {
     background: #1f1f2e;
     margin-top: 2rem;
 }
+
+:root {
+    --bg: #0f0f1a;
+    --text: #f0f0f0;
+    --link: #80f2ff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark-mode {
+    --bg: #ffffff;
+    --text: #0f0f1a;
+    --link: #005f73;
+}
