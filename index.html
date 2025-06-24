@@ -3,89 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATLAS V1: Glitched Core</title>
+    <title>FEROCITY SYSTEMS // PROJECT HUB</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        button {
+            background-color: #1f1f2e;
+            color: #80f2ff;
+            border: 1px solid #80f2ff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #2a2a3d;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background-color: #1f1f2e;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(128, 242, 255, 0.2);
+            transition: transform 0.2s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-card a {
+            text-decoration: none;
+            color: #80f2ff;
+            font-weight: bold;
+        }
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f0f1a;
+            color: #80f2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            font-size: 1.5rem;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
+    <div id="loader">[FEROCITY SYSTEMS LOADING...]</div>
     <header>
-        <h1>ATLAS V1: Glitched Core</h1>
+        <h1>FEROCITY SYSTEMS // PROJECT HUB</h1>
         <nav>
-            <a href="features.html">Features</a>
-            <a href="commands.html">Commands</a>
-            
+            <a href="features.html">ATLAS Features</a>
+            <a href="commands.html">ATLAS Commands</a>
         </nav>
     </header>
     <main>
-    <div style="text-align: right; padding: 0 1rem;">
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    </div>
-    
-<div style="text-align:center; margin-bottom: 2rem;">
-    <img src="banner_glitch.png" alt="ATLAS Banner" style="width: 100%; max-width: 700px;">
-</div>
-
-    <div id="quote-box" style="text-align:center; font-style:italic; margin-bottom: 2rem;">
-        <p id="quote">"Initializing neural uplink..."</p>
-    </div>
-    <div style="text-align:center; margin-bottom: 2rem;">
-        <iframe
-            src="https://player.twitch.tv/?channel=ferocitykk&parent=ferocitykk.github.io"
-            height="300"
-            width="500"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-        <h2>Welcome to ATLAS</h2>
-        <p>This site documents the ATLAS V1: Glitched Core project – a modular AI Twitch bot with voice, memory, and multi-game support.</p>
+        <div style="text-align: right; padding: 0 1rem;">
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <h2>ATLAS V1: Glitched Core</h2>
+                <p>Autonomous AI Twitch bot with voice, memory, emotion, and command logic.</p>
+                <a href="features.html">View Project →</a>
+            </div>
+            <div class="project-card">
+                <h2>EeveeTC Stream Suite</h2>
+                <p>Streaming tech support, emotes, overlays, merch integration & comeback campaign.</p>
+                <a href="#">Coming Soon</a>
+            </div>
+            <div class="project-card">
+                <h2>FerocityKK Channel</h2>
+                <p>DJ tech, bot integrations, hardware builds, and live stream automation tools.</p>
+                <a href="#">Coming Soon</a>
+            </div>
+        </div>
     </main>
     <footer>
         <p>Made by Ferocitykk | Hosted on GitHub Pages</p>
     </footer>
-<script>
-    const quotes = [
-        '"Initializing neural uplink..."',
-        '"Connection to mainframe secure."',
-        '"Awaiting command input..."',
-        '"404 not found? Not my problem."',
-        '"All systems online, Choom."'
-    ];
+    <script>
     function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
     }
-    function rotateQuote() {
-        const quote = quotes[Math.floor(Math.random() * quotes.length)];
-        document.getElementById("quote").innerText = quote;
-    }
-    setInterval(rotateQuote, 4000);
-</script>
-
-<style>
-#loader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0f0f1a;
-    color: #80f2ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: monospace;
-    font-size: 1.5rem;
-    z-index: 9999;
-}
-</style>
-<div id="loader">[ATLAS SYSTEM BOOTING...]</div>
-<script>
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-    }, 1500);
-});
-</script>
-
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+        }, 1500);
+    });
+    </script>
 </body>
 </html>
