@@ -20,6 +20,11 @@
     <div style="text-align: right; padding: 0 1rem;">
         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
+    
+<div style="text-align:center; margin-bottom: 2rem;">
+    <img src="banner_glitch.png" alt="ATLAS Banner" style="width: 100%; max-width: 700px;">
+</div>
+
     <div id="quote-box" style="text-align:center; font-style:italic; margin-bottom: 2rem;">
         <p id="quote">"Initializing neural uplink..."</p>
     </div>
@@ -55,5 +60,32 @@
     }
     setInterval(rotateQuote, 4000);
 </script>
+
+<style>
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f0f1a;
+    color: #80f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1.5rem;
+    z-index: 9999;
+}
+</style>
+<div id="loader">[ATLAS SYSTEM BOOTING...]</div>
+<script>
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+    }, 1500);
+});
+</script>
+
 </body>
 </html>
