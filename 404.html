@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Signal Lost</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .glitch {
+            font-size: 2rem;
+            color: #ff0055;
+            text-shadow: 2px 0 #00ffee, -2px 0 #ff00ff;
+            animation: flicker 1.5s infinite alternate;
+            margin-top: 2rem;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        .center {
+            text-align: center;
+            margin-top: 5rem;
+        }
+        a {
+            color: #80f2ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ATLAS V1: Glitched Core</h1>
+    </header>
+    <main class="center">
+        <div class="glitch">404 ERROR – Signal Lost</div>
+        <p>ATLAS couldn't locate that file. It might’ve flatlined, or you might’ve slipped into a bad subnet.</p>
+        <p><em>"You're not supposed to be here, Choomba."</em></p>
+        <p><a href="index.html">Return to Core Systems</a></p>
+    </main>
+    <footer>
+        <p>Ferocitykk Systems © 2025</p>
+    </footer>
+</body>
+</html>
