@@ -1,109 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V1STAX SYSTEMS // PROJECT HUB</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        button {
-            background-color: #1f1f2e;
-            color: #80f2ff;
-            border: 1px solid #80f2ff;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-family: monospace;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        button:hover {
-            background-color: #2a2a3d;
-        }
-        .project-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .project-card {
-            background-color: #1f1f2e;
-            padding: 1rem;
-            border-radius: 8px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(128, 242, 255, 0.2);
-            transition: transform 0.2s ease;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-        .project-card a {
-            text-decoration: none;
-            color: #80f2ff;
-            font-weight: bold;
-        }
-        #loader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0f0f1a;
-            color: #80f2ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: monospace;
-            font-size: 1.5rem;
-            z-index: 9999;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V1STAX // Creator Systems Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0f1a;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #00ffff;
+    }
+    h2 {
+      color: #ffffff;
+      margin-top: 3rem;
+    }
+    .tagline {
+      color: #a0a0a0;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .card {
+      background-color: #1a1d2e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      border: 1px solid #333;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 12px #00ffff60;
+    }
+    .card h3 {
+      color: #00ffff;
+    }
+    .card p {
+      color: #cccccc;
+      margin-bottom: 0.8rem;
+    }
+    .card a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .dropdown {
+      margin-top: 1rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #ffffff;
+      padding: 0.5rem 0;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div id="loader">[V1STAX SYSTEMS LOADING...]</div>
-    <header>
-        <h1>V1STAX SYSTEMS // PROJECT HUB</h1>
-        <nav>
-            <a href="features.html">ATLAS Features</a>
-            <a href="commands.html">ATLAS Commands</a>
-        </nav>
-    </header>
-    <main>
-        <div style="text-align: right; padding: 0 1rem;">
-            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        </div>
-        <div class="project-grid">
-            <div class="project-card">
-                <h2>ATLAS V1: Glitched Core</h2>
-                <p>Autonomous AI Twitch bot with voice, memory, emotion, and command logic.</p>
-                <a href="features.html">View Project →</a>
-            </div>
-            <div class="project-card">
-                <h2>EeveeTC Stream Suite</h2>
-                <p>Streaming tech support, emotes, overlays, merch integration & comeback campaign.</p>
-                <a href="eeveetc.html">View Project →</a>
-            </div>
-            <div class="project-card">
-                <h2>FerocityKK Channel</h2>
-                <p>DJ tech, bot integrations, hardware builds, and live stream automation tools.</p>
-                <a href="ferocitykk.html">View Project →</a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>Made by Ferocity | Hosted on GitHub Pages</p>
-    </footer>
-    <script>
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-    }
-    window.addEventListener("load", () => {
-        setTimeout(() => {
-            document.getElementById("loader").style.display = "none";
-        }, 1500);
-    });
-    </script>
+  <h1>V1STAX: Creator Systems Studio</h1>
+  <p class="tagline">Tools for the Twitch-Integrated Future.</p>
+
+  <h2>Active Systems</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>ATLAS V1: Glitched Core</h3>
+      <p>Autonomous AI Twitch bot with voice, memory, emotion, and command logic.</p>
+      <a href="#">View Project →</a>
+      <div class="dropdown">
+        <details>
+          <summary>ATLAS Features</summary>
+          <ul>
+            <li>Voice + TTS system</li>
+            <li>Emotion Engine</li>
+            <li>Twitch chat memory + commands</li>
+            <li>Flask API + modular systems</li>
+          </ul>
+        </details>
+        <details>
+          <summary>ATLAS Commands</summary>
+          <ul>
+            <li>!origin – ATLAS lore drop</li>
+            <li>!reboot – Core reset trigger</li>
+            <li>!lockdown – Safety Fuse lockdown</li>
+            <li>...more incoming</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>EeveeTC Stream Suite</h3>
+      <p>Streaming tech support, emotes, overlays, merch integration & comeback campaign.</p>
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>FerocityKK Channel</h3>
+      <p>DJ tech, bot integrations, hardware builds, and live stream automation tools.</p>
+      <a href="#">View Project →</a>
+    </div>
+  </div>
+
+  <footer>
+    Made by Ferocity | Hosted on GitHub Pages<br>
+    <a href="https://github.com/V1STAX" style="color: #00ffff;">Visit GitHub Org</a>
+  </footer>
 </body>
 </html>
