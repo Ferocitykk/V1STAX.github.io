@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V1STAX // Creator Systems Studio</title>
+  <link rel="icon" type="image/png" href="Smiling%20Retro%20Neon%20Monitor.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,22 +15,28 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
     }
-    h1 {
+    header {
+      width: 100%;
+      background: url('Psychedelic%20Swirls%20in%20Purple%20and%20Blue.png') center/cover no-repeat;
+      padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+    header h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
       color: #00ffff;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 6px #000;
+    }
+    header .tagline {
+      color: #ffffffdd;
+      font-size: 1.2rem;
+      text-shadow: 0 0 4px #000;
     }
     h2 {
       color: #ffffff;
       margin-top: 3rem;
-    }
-    .tagline {
-      color: #a0a0a0;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
     }
     .projects {
       display: grid;
@@ -37,6 +44,7 @@
       gap: 1.5rem;
       width: 100%;
       max-width: 1000px;
+      padding: 2rem;
     }
     .card {
       background-color: #1a1d2e;
@@ -75,12 +83,15 @@
       font-size: 0.9rem;
       color: #666;
       text-align: center;
+      padding-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>V1STAX: Creator Systems Studio</h1>
-  <p class="tagline">Tools for the Twitch-Integrated Future.</p>
+  <header>
+    <h1>V1STAX: Creator Systems Studio</h1>
+    <p class="tagline">Tools for the Twitch-Integrated Future.</p>
+  </header>
 
   <h2>Active Systems</h2>
   <div class="projects">
