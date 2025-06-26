@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ATLAS V1: Glitched Core | V1STAX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Smiling%20Retro%20Neon%20Monitor.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0f1a;
+      color: #e0e0e0;
+    }
+    header {
+      background: url('Psychedelic%20Swirls%20in%20Purple%20and%20Blue.png') center/cover no-repeat;
+      padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #00ffff;
+      text-shadow: 0 0 6px #000;
+    }
+    header .tagline {
+      font-size: 1.1rem;
+      color: #ffffffcc;
+      text-shadow: 0 0 4px #000;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+    }
+    h2 {
+      color: #00ffff;
+      margin-top: 2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      color: #666;
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ATLAS V1: Glitched Core</h1>
+    <p class="tagline">Autonomous AI Twitch bot with voice, memory, emotion, and command logic.</p>
+  </header>
+
+  <div class="container">
+    <h2>Overview</h2>
+    <p>ATLAS is your synthetic co-host — a fully autonomous AI system built for stream interaction, gameplay support, lore delivery, and chaos with control.</p>
+
+    <h2>Core Features</h2>
+    <ul>
+      <li>Voice + TTS System with modular startup phrases</li>
+      <li>Emotion Engine reacting to chat and streamer tone</li>
+      <li>Memory Layer with contextual Twitch chat tracking</li>
+      <li>Command Routing & Flask API for modular actions</li>
+    </ul>
+
+    <h2>Available Commands</h2>
+    <ul>
+      <li><strong>!origin</strong> – Drops ATLAS’s synthetic backstory</li>
+      <li><strong>!reboot</strong> – Resets the ATLAS core for dramatic effect</li>
+      <li><strong>!lockdown</strong> – Emergency containment protocol</li>
+      <li><strong>!status</strong> – Outputs current emotion and system uptime</li>
+    </ul>
+
+    <h2>Coming Soon</h2>
+    <ul>
+      <li>Vector Memory Integration for persistent viewer context</li>
+      <li>Multi-game support (Minecraft, Cookie Clicker, Osu!)</li>
+      <li>Safety Fuse fail-state triggers</li>
+      <li>Reactive PNGTuber logic</li>
+    </ul>
+
+    <p><a href="index.html">&larr; Back to V1STAX Hub</a></p>
+  </div>
+
+  <footer>
+    Made by Ferocity | Hosted on GitHub Pages<br>
+    <a href="https://github.com/V1STAX">Visit GitHub Org</a>
+  </footer>
+</body>
+</html>
