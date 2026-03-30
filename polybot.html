@@ -63,22 +63,6 @@
         </div>
       </div>
 
-      <p class="section-label" style="margin-top:2.5rem;">Architecture</p>
-      <table class="cmd-table">
-        <thead>
-          <tr><th>Component</th><th>Purpose</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>monitor.py</td><td>Main poll loop every 5 minutes — Rich terminal dashboard</td></tr>
-          <tr><td>kalshi_momentum.py</td><td>Evaluates momentum signals against threshold (≥ 0.40)</td></tr>
-          <tr><td>paper_trading.py</td><td>Demo order placement and position management</td></tr>
-          <tr><td>outcomes.py</td><td>Polls every 30 min for market resolution and closes trades</td></tr>
-          <tr><td>server.py</td><td>FastAPI web server on :8080 serving the PWA dashboard</td></tr>
-          <tr><td>database.py</td><td>SQLite — signals and markets tables</td></tr>
-          <tr><td>analyze.py</td><td>CLI analytics — run with <code>python analyze.py --days N</code></td></tr>
-        </tbody>
-      </table>
-
       <p class="section-label" style="margin-top:2.5rem;">Dashboard</p>
       <div class="info-block">
         <h3>Live PWA</h3>
