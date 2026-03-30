@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup - ATLAS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATLAS Setup — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>ATLAS V1: Glitched Core</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="features.html">Features</a>
-            <a href="commands.html">Commands</a>
-            <a href="setup.html">Setup</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Installation & Setup</h2><p>Clone the ATLAS repo, install dependencies, and run <code>atlas_main.py</code> to start the bot. Flask + Ngrok needed for live Twitch integration.</p>
-    </main>
-    <footer>
-        <p>Made by Ferocitykk | Hosted on GitHub Pages</p>
-    </footer>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">ATLAS</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="setup.html" class="active">Setup</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Setup</h1>
+    <p class="tagline">Get ATLAS V1 running locally and connected to your Twitch channel.</p>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <p class="section-label">Prerequisites</p>
+      <div class="info-block">
+        <h3>What you'll need</h3>
+        <p>Python 3.10+, a Twitch developer account with an app registered, and Ngrok for exposing your local Flask server to Twitch's webhook endpoints.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Installation</p>
+      <ol class="steps">
+        <li><p>Clone the ATLAS repository from the <a href="https://github.com/V1STAX" target="_blank">V1STAX GitHub org</a> to your local machine.</p></li>
+        <li><p>Install dependencies: <code>pip install -r requirements.txt</code></p></li>
+        <li><p>Copy <code>.env.example</code> to <code>.env</code> and fill in your Twitch credentials and API keys.</p></li>
+        <li><p>Start Ngrok on the Flask port: <code>ngrok http 5000</code> — copy the forwarding URL into your <code>.env</code>.</p></li>
+        <li><p>Launch ATLAS: <code>python atlas_main.py</code></p></li>
+      </ol>
+
+      <p class="section-label" style="margin-top:2.5rem;">Twitch Integration</p>
+      <div class="info-block">
+        <h3>Connecting to Chat</h3>
+        <p>ATLAS connects to Twitch IRC using your bot account's OAuth token. Once running, it will join your channel and respond to commands. Event subscriptions (follows, subs, raids) are handled via Twitch EventSub through the Ngrok tunnel.</p>
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="atlas.html">← Back to ATLAS Overview</a></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+  </footer>
+
 </body>
 </html>

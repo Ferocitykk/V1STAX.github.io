@@ -1,142 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V1STAX // Creator Systems Studio</title>
-  <link rel="icon" type="image/png" href="Smiling%20Retro%20Neon%20Monitor.png">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0d0f1a;
-      color: #e0e0e0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    header {
-      width: 100%;
-      background: url('Neon%20Swirls%20in%20Purple%20Hues.png') center/cover no-repeat;
-      padding: 4rem 2rem 6rem;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #00ffff;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 6px #000;
-    }
-    header .tagline {
-      color: #ffffffdd;
-      font-size: 1.2rem;
-      text-shadow: 0 0 4px #000;
-    }
-    h2 {
-      color: #ffffff;
-      margin-top: 3rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      width: 100%;
-      max-width: 1000px;
-      padding: 2rem;
-    }
-    .card {
-      background-color: #1a1d2e;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      border: 1px solid #333;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 12px #00ffff60;
-    }
-    .card h3 {
-      color: #00ffff;
-    }
-    .card p {
-      color: #cccccc;
-      margin-bottom: 0.8rem;
-    }
-    .card a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .dropdown {
-      margin-top: 1rem;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: #ffffff;
-      padding: 0.5rem 0;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #666;
-      text-align: center;
-      padding-bottom: 2rem;
-    }
-  </style>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">ATLAS</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="eeveetc.html">EeveeTC</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
     <h1>V1STAX</h1>
-    <p class="tagline">Projects by Ferocity.</p>
-  </header>
-
-  <h2>Active Systems</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>ATLAS V1: Glitched Core</h3>
-      <p>Autonomous AI Twitch bot with voice, memory, emotion, and command logic.</p>
-      <a href="atlas.html">View Project →</a>
-      <div class="dropdown">
-        <details>
-          <summary>ATLAS Features</summary>
-          <ul>
-            <li>Voice + TTS system</li>
-            <li>Emotion Engine</li>
-            <li>Twitch chat memory + commands</li>
-            <li>Flask API + modular systems</li>
-          </ul>
-        </details>
-        <details>
-          <summary>ATLAS Commands</summary>
-          <ul>
-            <li>!origin – ATLAS lore drop</li>
-            <li>!reboot – Core reset trigger</li>
-            <li>!lockdown – Safety Fuse lockdown</li>
-            <li>...more incoming</li>
-          </ul>
-        </details>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>EeveeTC Stream Suite</h3>
-      <p>Kawaii gaming, chill vibes, Overwatch GM Mercy Master.</p>
-      <a href="eeveetc.html">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>FerocityKK Channel</h3>
-      <p>Random Projects, gaming, and ATLAS Dev Streams.</p>
-      <a href="ferocitykk.html">View Project →</a>
-    </div>
+    <p class="tagline">Creator systems, AI tooling, and stream infrastructure — built by Ferocity.</p>
   </div>
 
+  <main>
+    <div class="container">
+
+      <p class="section-label">Active Systems</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>ATLAS V2</h3>
+          <p>Autonomous AI Twitch streamer — plays Minecraft, learns from chat, self-improving. Inspired by Neuro-sama.</p>
+          <a href="atlas.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-wip">Paper Trading</span>
+          <h3>Polybot</h3>
+          <p>Automated Kalshi prediction market trading bot with momentum signals, SQLite logging, and a live PWA dashboard.</p>
+          <a href="polybot.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>Pi 5 Minecraft Server</h3>
+          <p>Headless Raspberry Pi 5 running a self-hosted Minecraft server on local infrastructure.</p>
+          <a href="piserver.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>EeveeTC Stream Suite</h3>
+          <p>Full stream infrastructure for EeveeTC — overlays, audio, OBS setup, and growth analytics.</p>
+          <a href="eeveetc.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-wip">In Progress</span>
+          <h3>FerocityKK Channel</h3>
+          <p>Gaming, AI bot dev streams, hardware experiments, and random projects. Always building.</p>
+          <a href="ferocitykk.html" class="card-link">View Channel →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
   <footer>
-    Made by Ferocity | Hosted on GitHub Pages<br>
-    <a href="https://github.com/V1STAX" style="color: #00ffff;">Visit GitHub Org</a>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
   </footer>
+
 </body>
 </html>

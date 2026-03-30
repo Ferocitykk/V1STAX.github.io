@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polybot — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">ATLAS</a></li>
+      <li><a href="polybot.html" class="active">Polybot</a></li>
+      <li><a href="piserver.html">Pi Server</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Polybot</h1>
+    <p class="tagline">Automated prediction market trading bot — momentum signals, paper trading, live PWA dashboard.</p>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <p class="section-label">Overview</p>
+      <div class="info-block">
+        <h3>What is Polybot?</h3>
+        <p>Polybot monitors Kalshi prediction markets for momentum signals — price velocity, volume spikes, and spread tightening — and automatically places paper trades on Kalshi's demo environment. A live mobile dashboard tracks open positions and P&L in real time.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Current Phase</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-wip">Phase 2</span>
+          <h3>Paper Trading</h3>
+          <p>Running on Kalshi's demo environment. Flat $10 stake per signal, max 5 open trades. Accumulating win rate data before going live.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Phase 3</span>
+          <h3>Live Trading</h3>
+          <p>Target: ~1 month of paper data. If results are positive, flip to real money at $1–2 stakes with tighter position limits.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Signal Logic</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Price Velocity</h3>
+          <p>Detects rapid directional movement in contract prices as a momentum indicator.</p>
+        </div>
+        <div class="card">
+          <h3>Volume Momentum</h3>
+          <p>Tracks abnormal volume spikes that precede significant price moves.</p>
+        </div>
+        <div class="card">
+          <h3>Spread Tightening</h3>
+          <p>Identifies markets where the bid/ask spread is compressing — a sign of increasing conviction.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Architecture</p>
+      <table class="cmd-table">
+        <thead>
+          <tr><th>Component</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>monitor.py</td><td>Main poll loop every 5 minutes — Rich terminal dashboard</td></tr>
+          <tr><td>kalshi_momentum.py</td><td>Evaluates momentum signals against threshold (≥ 0.40)</td></tr>
+          <tr><td>paper_trading.py</td><td>Demo order placement and position management</td></tr>
+          <tr><td>outcomes.py</td><td>Polls every 30 min for market resolution and closes trades</td></tr>
+          <tr><td>server.py</td><td>FastAPI web server on :8080 serving the PWA dashboard</td></tr>
+          <tr><td>database.py</td><td>SQLite — signals and markets tables</td></tr>
+          <tr><td>analyze.py</td><td>CLI analytics — run with <code>python analyze.py --days N</code></td></tr>
+        </tbody>
+      </table>
+
+      <p class="section-label" style="margin-top:2.5rem;">Dashboard</p>
+      <div class="info-block">
+        <h3>Live PWA</h3>
+        <p>Mobile-friendly progressive web app with three tabs: Live signals, Trade history, and Paper P&amp;L chart. Served via a Cloudflare Tunnel from local infrastructure — no cloud hosting required.</p>
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+  </footer>
+
+</body>
+</html>

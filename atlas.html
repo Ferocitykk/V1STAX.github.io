@@ -1,99 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ATLAS V1: Glitched Core | V1STAX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="Smiling%20Retro%20Neon%20Monitor.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0d0f1a;
-      color: #e0e0e0;
-    }
-    header {
-      background: url('Psychedelic%20Swirls%20in%20Purple%20and%20Blue.png') center/cover no-repeat;
-      padding: 4rem 2rem 6rem;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #00ffff;
-      text-shadow: 0 0 6px #000;
-    }
-    header .tagline {
-      font-size: 1.1rem;
-      color: #ffffffcc;
-      text-shadow: 0 0 4px #000;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-    }
-    h2 {
-      color: #00ffff;
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      color: #666;
-      margin-top: 4rem;
-      padding-bottom: 2rem;
-    }
-  </style>
+  <title>ATLAS V2 — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>ATLAS V1: Glitched Core</h1>
-    <p class="tagline">Autonomous AI Twitch bot with voice, memory, emotion, and command logic. Powered by V1STAX.</p>
-  </header>
 
-  <div class="container">
-    <h2>Overview</h2>
-    <p>ATLAS is your synthetic co-host — a fully autonomous AI system for stream interaction, gameplay support, lore delivery, and controlled chaos.</p>
-
-    <h2>Core Features</h2>
-    <ul>
-      <li>Voice + TTS System with modular startup phrases</li>
-      <li>Emotion Engine reacting to chat and streamer tone</li>
-      <li>Memory Layer with contextual Twitch chat tracking</li>
-      <li>Command Routing & Flask API for modular actions</li>
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="atlas.html" class="active">ATLAS</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="commands.html">Commands</a></li>
+      <li><a href="setup.html">Setup</a></li>
     </ul>
+  </nav>
 
-    <h2>Available Commands</h2>
-    <ul>
-      <li><strong>!origin</strong> – Drops ATLAS’s synthetic backstory</li>
-      <li><strong>!reboot</strong> – Resets the ATLAS core for dramatic effect</li>
-      <li><strong>!lockdown</strong> – Emergency containment protocol</li>
-      <li><strong>!status</strong> – Outputs current emotion and system uptime</li>
-    </ul>
-
-    <h2>Coming Soon</h2>
-    <ul>
-      <li>Vector Memory Integration for persistent viewer context</li>
-      <li>Multi-game support (Minecraft, Cookie Clicker, Osu!)</li>
-      <li>Safety Fuse fail-state triggers</li>
-      <li>Reactive PNGTuber logic</li>
-    </ul>
-
-    <p><a href="index.html">&larr; Back to V1STAX Hub</a></p>
+  <div class="page-hero">
+    <h1>ATLAS V2</h1>
+    <p class="tagline">Autonomous AI Twitch streamer — plays Minecraft, learns from chat, and runs unattended. Inspired by Neuro-sama.</p>
   </div>
 
+  <main>
+    <div class="container">
+
+      <p class="section-label">Overview</p>
+      <div class="info-block">
+        <h3>What is ATLAS?</h3>
+        <p>ATLAS is a fully autonomous AI streaming entity — it plays Minecraft, interacts with Twitch chat in real time, scores its own responses, and learns what entertains viewers over time. Built on Groq (Llama 3.3 70B) with an OpenAI fallback, running locally on the Gigabyte Brix. Long-term goal: fully local inference via Ollama once a GPU is available.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Core Systems</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Voice + TTS</h3>
+          <p>Piper TTS running locally with edge-tts fallback. Custom voice profile — no cloud dependency.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Emotion Engine</h3>
+          <p>Mood state injected into LLM system prompt. Maps emotion to voice tone — Hype, Alert, Calm, and more.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>FAISS Memory</h3>
+          <p>Every Twitch chat message vectorized and stored. ATLAS builds a semantic memory of its community over time.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Autonomous Loop</h3>
+          <p>Idle commentary, auto-Minecraft, event handling, and periodic self-improvement — runs unattended from boot.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Self-Learning Pipeline</h3>
+          <p>Scores every response by chat engagement. Saves high-scoring exchanges as Llama 3 JSONL training data for future LoRA fine-tuning.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>OBS Control</h3>
+          <p>WebSocket integration for autonomous scene switching during streams.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Commands</p>
+      <table class="cmd-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>!origin</td><td>Drops ATLAS's synthetic backstory lore</td></tr>
+          <tr><td>!reboot</td><td>Resets the ATLAS core for dramatic effect</td></tr>
+          <tr><td>!lockdown</td><td>Activates the Safety Fuse containment protocol</td></tr>
+          <tr><td>!status</td><td>Outputs current emotion state and system uptime</td></tr>
+        </tbody>
+      </table>
+
+      <p class="section-label" style="margin-top:2.5rem;">Roadmap</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Vector Memory</h3>
+          <p>Persistent viewer context using vector embeddings for long-term chat memory.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Multi-Game Support</h3>
+          <p>Minecraft, Cookie Clicker, and Osu! integrations for live game-aware responses.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Reactive PNGTuber</h3>
+          <p>Visual avatar tied to ATLAS emotion state — reacts in real time on stream.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
+  </main>
+
   <footer>
-    Made by Ferocity | Hosted on GitHub Pages<br/>
-    <a href="https://github.com/V1STAX">Visit GitHub Org</a>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
   </footer>
+
 </body>
 </html>

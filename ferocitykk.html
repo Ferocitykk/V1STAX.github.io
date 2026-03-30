@@ -1,66 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FerocityKK Channel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FerocityKK — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <h1>FerocityKK Channel</h1>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
-  </header>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">ATLAS</a></li>
+      <li><a href="ferocitykk.html" class="active">FerocityKK</a></li>
+      <li><a href="eeveetc.html">EeveeTC</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>FerocityKK</h1>
+    <p class="tagline">Gaming, AI dev streams, hardware builds, and whatever gets cooked up next.</p>
+  </div>
 
   <main>
-    <section class="hero">
-      <h2>Welcome to FerocityKK</h2>
-      <p>Gaming. Nerdy builds. ATLAS bot tests. Always experimenting.</p>
-    </section>
+    <div class="container">
 
-    <section class="stream-embed">
-      <h2>Watch FerocityKK Live</h2>
-      <div id="twitch-embed"></div>
-    </section>
+      <p class="section-label">Live Stream</p>
+      <div class="embed-wrap">
+        <div id="twitch-embed"></div>
+      </div>
 
-    <section class="about">
-      <h2>About FerocityKK</h2>
-      <p>Streaming and content experiments — Gaming, AI bots, custom PC tuning, and hardware guides for chill vibes and nerdy fun.</p>
-    </section>
+      <p class="section-label" style="margin-top:2.5rem;">About</p>
+      <div class="info-block">
+        <h3>What to expect</h3>
+        <p>Streaming and content experiments — gaming, AI bot development, custom PC tuning, and hardware guides. If something interesting is being built, it's probably going live here first.</p>
+      </div>
 
-    <section class="systems">
-      <h2>Systems</h2>
-      <ul>
-        <li>🤖 ATLAS AI integration and testing live</li>
-        <li>🔧 Custom PC tuning + hardware guides</li>
-        <li>🧪 Stream tech experiments (bots, overlays, Flask demos)</li>
-      </ul>
-    </section>
+      <p class="section-label" style="margin-top:2.5rem;">Active Projects on Stream</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>ATLAS Dev Streams</h3>
+          <p>Building and testing ATLAS V1 live — watch the bot evolve in real time.</p>
+          <a href="atlas.html" class="card-link">ATLAS Overview →</a>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Hardware & PC Tuning</h3>
+          <p>Custom builds, benchmarking, and optimization guides done on stream.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-wip">In Progress</span>
+          <h3>Stream Tech Experiments</h3>
+          <p>Overlay systems, Flask demos, bot integrations — all tested live.</p>
+        </div>
+      </div>
 
-    <section class="status">
-      <h2>Status</h2>
-      <p><strong>Channel:</strong> FerocityKK on Twitch – live test streams and project showcases.<br/>Project phase: <em>In Progress</em>.</p>
-    </section>
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
   </main>
 
   <footer>
-    <p>Made by Ferocitykk | Hosted on GitHub Pages</p>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
   </footer>
 
-  <!-- Twitch Embed Script -->
   <script src="https://embed.twitch.tv/embed/v1.js"></script>
-  <script type="text/javascript">
+  <script>
     new Twitch.Embed("twitch-embed", {
       width: "100%",
-      height: 480,
+      height: 500,
       channel: "ferocitykk",
       layout: "video-with-chat",
       theme: "dark"
     });
   </script>
+
 </body>
 </html>

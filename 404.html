@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Signal Lost</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .glitch {
-            font-size: 2rem;
-            color: #ff0055;
-            text-shadow: 2px 0 #00ffee, -2px 0 #ff00ff;
-            animation: flicker 1.5s infinite alternate;
-            margin-top: 2rem;
-        }
-        @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
-        }
-        .center {
-            text-align: center;
-            margin-top: 5rem;
-        }
-        a {
-            color: #80f2ff;
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Signal Lost | V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>ATLAS V1: Glitched Core</h1>
-    </header>
-    <main class="center">
-        <div class="glitch">404 ERROR – Signal Lost</div>
-        <p>ATLAS couldn't locate that file. It might’ve flatlined, or you might’ve slipped into a bad subnet.</p>
-        <p><em>"You're not supposed to be here, Choomba."</em></p>
-        <p><a href="index.html">Return to Core Systems</a></p>
-    </main>
-    <footer>
-        <p>Ferocitykk Systems © 2025</p>
-    </footer>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1STAX</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="error-page">
+      <div class="error-code">404</div>
+      <div class="error-title">Signal Lost</div>
+      <p style="color: var(--text-dim); max-width: 420px; margin: 0 auto 2rem;">ATLAS couldn't locate that file. It may have flatlined, or you've slipped into a bad subnet.</p>
+      <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom:2rem;"><em>"You're not supposed to be here, Choomba."</em></p>
+      <a href="index.html" style="color: var(--teal); font-weight: 600;">← Return to Core Systems</a>
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+  </footer>
+
 </body>
 </html>
