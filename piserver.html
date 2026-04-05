@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pi 5 Minecraft Server — V1STAX</title>
+  <title>Pi 4 Minecraft Server — V1STAX</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="topnav">
-    <a href="index.html" class="nav-brand">V1STAX</a>
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
     <ul class="nav-links">
-      <li><a href="atlas.html">ATLAS</a></li>
-      <li><a href="polybot.html">Polybot</a></li>
-      <li><a href="piserver.html" class="active">Pi Server</a></li>
+      <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="eeveetc.html">eeveeTC</a></li>
       <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
     </ul>
   </nav>
 
   <div class="page-hero">
-    <h1>Pi 5 Server</h1>
-    <p class="tagline">Headless Raspberry Pi 5 running a self-hosted Minecraft server on local infrastructure.</p>
+    <h1>Pi 4 Server</h1>
+    <p class="tagline">A personal Minecraft server running headless on a Raspberry Pi 4 — the project that started it all.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot"></div> Online</div>
+      <div class="hero-pill"><div class="dot off"></div> Jan 25, 2025 — 1 Year Running</div>
+      <div class="hero-pill"><div class="dot off"></div> Friends Only</div>
+    </div>
   </div>
 
   <main>
@@ -29,21 +34,54 @@
 
       <p class="section-label">Overview</p>
       <div class="info-block">
-        <h3>Self-Hosted Minecraft</h3>
-        <p>A headless Raspberry Pi 5 dedicated to running a personal Minecraft server. No cloud hosting — fully self-managed on local hardware, with remote access handled over the home network.</p>
+        <h3>Where it started</h3>
+        <p>This was the first real project — a headless Raspberry Pi 4 running Linux with no monitor, no GUI, managed entirely over SSH. Setting this up was the introduction to self-hosted infrastructure, Linux administration, and keeping a service running 24/7 on local hardware. It's been online since January 25th, 2025 and just hit its one year anniversary.</p>
       </div>
 
       <p class="section-label" style="margin-top:2.5rem;">Hardware</p>
       <div class="card-grid">
         <div class="card">
           <span class="badge badge-active">Running</span>
-          <h3>Raspberry Pi 5</h3>
-          <p>Headless setup — no display, managed entirely over SSH. Runs 24/7 as a dedicated server node.</p>
+          <h3>Raspberry Pi 4 — 8GB</h3>
+          <p>Headless setup, no display. Managed entirely over SSH from any device on the network. Runs 24/7 as a dedicated server node.</p>
         </div>
         <div class="card">
-          <span class="badge badge-wip">Planned</span>
+          <span class="badge badge-active">Local Network</span>
+          <h3>Home Infrastructure</h3>
+          <p>No cloud hosting — fully self-managed on local hardware. Access is limited to friends with the server address.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Software</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>PaperMC</h3>
+          <p>High-performance Minecraft server software built on top of Spigot. Optimized for low-resource hardware like the Pi 4.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>PineCraft</h3>
+          <p>Pi-optimized Minecraft distribution. Tuned specifically for Raspberry Pi hardware to keep the server stable and performant.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Minecraft 1.20</span>
+          <h3>Vanilla — No Mods</h3>
+          <p>Running vanilla 1.20 with no mods. Clean survival experience for a small group of friends.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Roadmap</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Version Update</h3>
+          <p>Upgrade to a newer Minecraft version when time allows — a previous update attempt broke the server so it's been stable on 1.20 since.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
           <h3>ATLAS Integration</h3>
-          <p>Future integration with ATLAS V2 for live game-aware commentary and Twitch chat bridging during streams.</p>
+          <p>Bridge the server with ATLAS V2 for live game-aware commentary and Twitch chat interaction during streams.</p>
         </div>
       </div>
 
@@ -54,7 +92,7 @@
 
   <footer>
     <span>V1STAX &mdash; Built by Ferocity</span>
-    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub →</a>
   </footer>
 
 </body>
