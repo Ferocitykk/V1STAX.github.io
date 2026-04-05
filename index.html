@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V1STAX // Creator Systems Studio</title>
+  <title>V1STAX — Creator Systems Studio</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="topnav">
-    <a href="index.html" class="nav-brand">V1STAX</a>
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
     <ul class="nav-links">
-      <li><a href="atlas.html">ATLAS</a></li>
+      <li><a href="atlas.html">Atlas</a></li>
       <li><a href="ferocitykk.html">FerocityKK</a></li>
       <li><a href="eeveetc.html">eeveeTC</a></li>
       <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
@@ -22,6 +22,11 @@
   <div class="page-hero">
     <h1>V1STAX</h1>
     <p class="tagline">Creator systems, AI tooling, and stream infrastructure — built by Ferocity.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot"></div> Atlas V2 Live</div>
+      <div class="hero-pill"><div class="dot warn"></div> Hermes Paper Trading</div>
+      <div class="hero-pill"><div class="dot"></div> eeveeTC Active</div>
+    </div>
   </div>
 
   <main>
@@ -33,22 +38,29 @@
         <div class="card">
           <span class="badge badge-active">Active</span>
           <h3>ATLAS V2</h3>
-          <p>Autonomous AI Twitch streamer — plays Minecraft, learns from chat, self-improving. Inspired by Neuro-sama.</p>
+          <p>Autonomous AI Twitch streamer — plays Minecraft, learns from chat, and self-improves over time. Inspired by Neuro-sama.</p>
           <a href="atlas.html" class="card-link">View Project →</a>
         </div>
 
         <div class="card">
           <span class="badge badge-wip">Paper Trading</span>
-          <h3>Polybot</h3>
-          <p>Automated Kalshi prediction market trading bot with momentum signals, SQLite logging, and a live PWA dashboard.</p>
+          <h3>Hermes</h3>
+          <p>Automated Kalshi prediction market trading bot. Momentum signals, EV filtering, SQLite logging, and a live dashboard.</p>
           <a href="polybot.html" class="card-link">View Project →</a>
         </div>
 
         <div class="card">
-          <span class="badge badge-active">Active</span>
-          <h3>Pi 5 Minecraft Server</h3>
-          <p>Headless Raspberry Pi 5 running a self-hosted Minecraft server on local infrastructure.</p>
-          <a href="piserver.html" class="card-link">View Project →</a>
+          <span class="badge badge-wip">Building</span>
+          <h3>PolyWhales</h3>
+          <p>Real-time Polymarket whale tracker — streams on-chain trades from Polygon, scores wallets by win rate, and surfaces signals.</p>
+          <a href="https://github.com/Ferocitykk/polywhales" target="_blank" class="card-link">View Repo →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Prometheus</h3>
+          <p>Claude-powered autonomous research and trade decision agent. Will consume signals from Hermes and PolyWhales when the Mac Mini arrives.</p>
+          <a href="#" class="card-link">Coming Soon →</a>
         </div>
 
         <div class="card">
@@ -61,8 +73,15 @@
         <div class="card">
           <span class="badge badge-wip">In Progress</span>
           <h3>FerocityKK Channel</h3>
-          <p>Gaming, AI bot dev streams, hardware experiments, and random projects. Always building.</p>
+          <p>Gaming, AI dev streams, hardware experiments, and random builds. Always something cooking.</p>
           <a href="ferocitykk.html" class="card-link">View Channel →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Active</span>
+          <h3>Pi 5 Minecraft Server</h3>
+          <p>Headless Raspberry Pi 5 running a self-hosted Minecraft server on local infrastructure.</p>
+          <a href="piserver.html" class="card-link">View Project →</a>
         </div>
 
       </div>
@@ -72,7 +91,7 @@
 
   <footer>
     <span>V1STAX &mdash; Built by Ferocity</span>
-    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub →</a>
   </footer>
 
 </body>
