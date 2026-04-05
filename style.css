@@ -99,10 +99,17 @@ nav.topnav .nav-links a.active { color: var(--text); }
   padding: 5rem 2rem 4rem;
   text-align: center;
   border-bottom: 1px solid var(--border);
-  background:
-    linear-gradient(180deg, rgba(99,102,241,0.04) 0%, transparent 100%),
-    radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 65%);
+  background-size: 200% 200%;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.14) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 0%, rgba(45,212,191,0.08) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(99,102,241,0.03) 0%, transparent 100%);
+  animation: heroBg 8s ease infinite alternate;
   position: relative; overflow: hidden;
+}
+@keyframes heroBg {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .page-hero::before {
