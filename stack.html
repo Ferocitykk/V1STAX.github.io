@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stack — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="eeveetc.html">eeveeTC</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>The Stack</h1>
+    <p class="tagline">All the hardware, software, and infrastructure running behind V1STAX.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot"></div> 3 Active Nodes</div>
+      <div class="hero-pill"><div class="dot off"></div> Mac Mini Incoming</div>
+      <div class="hero-pill"><div class="dot"></div> Self-Hosted</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <p class="section-label">Hardware</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="badge badge-active">Primary Node</span>
+          <h3>Gigabyte Brix — FeroServer</h3>
+          <p>Intel Core i7-8550U · 15GB RAM · Arch Linux. The main workhorse — runs Hermes, PolyWhales, ATLAS V2, and all Cloudflare tunnels 24/7 as a headless server.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Minecraft Node</span>
+          <h3>Raspberry Pi 4 — 8GB</h3>
+          <p>Headless Raspberry Pi 4 dedicated to running a personal Minecraft server. Online since January 2025 — the first real Linux/self-hosted infrastructure project.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Incoming</span>
+          <h3>Mac Mini — Prometheus Node</h3>
+          <p>Arriving soon. Will take over as the AI inference node — running Ollama with local LLMs for Prometheus, the autonomous trade decision agent.</p>
+        </div>
+
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Active Services</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="badge badge-active">Running</span>
+          <h3>Hermes</h3>
+          <p>Kalshi prediction market trading bot. FastAPI backend, SQLite database, live WebSocket dashboard. Systemd service, auto-restarts on failure.</p>
+          <a href="polybot.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Running</span>
+          <h3>PolyWhales</h3>
+          <p>Real-time Polymarket whale scanner. Streams on-chain events from Polygon via Alchemy WebSocket, scores wallets by win rate, surfaces signals.</p>
+          <a href="polywhales.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Running</span>
+          <h3>ATLAS V2</h3>
+          <p>Autonomous AI Twitch streamer. Groq LLM inference, Piper TTS, FAISS memory, OBS WebSocket control, self-learning pipeline.</p>
+          <a href="atlas.html" class="card-link">View Project →</a>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Running</span>
+          <h3>Cloudflare Tunnels</h3>
+          <p>Named tunnel routing all services to public subdomains — hermes.ferocity.trade, whales.ferocity.trade, v1stax.ferocity.trade. Zero open ports.</p>
+        </div>
+
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Software Stack</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>OS & System</h3>
+          <p>Arch Linux on the Brix, Raspberry Pi OS on the Pi 4. All services managed via systemd with linger enabled for boot-time autostart.</p>
+        </div>
+
+        <div class="card">
+          <h3>Backend</h3>
+          <p>Python 3 across all projects — FastAPI for web servers, SQLite for persistence, asyncio for concurrent loops, uvicorn for ASGI serving.</p>
+        </div>
+
+        <div class="card">
+          <h3>AI & Inference</h3>
+          <p>Groq API (Llama 3.3 70B) for ATLAS, Anthropic Claude for Prometheus (planned). Ollama with llama3.2:3b ready for local inference on the Mac Mini.</p>
+        </div>
+
+        <div class="card">
+          <h3>Networking</h3>
+          <p>Cloudflare for DNS, tunnels, and SSL. Alchemy for Polygon RPC and WebSocket. Zero exposed ports on the home network.</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub →</a>
+  </footer>
+
+</body>
+</html>

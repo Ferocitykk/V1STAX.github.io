@@ -6,6 +6,20 @@
   <title>V1STAX — Creator Systems Studio</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { animation: heroBg 8s ease infinite alternate; }
+    @keyframes heroBg {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .page-hero {
+      background-size: 200% 200%;
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(99,102,241,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 0%, rgba(45,212,191,0.08) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(99,102,241,0.03) 0%, transparent 100%);
+    }
+  </style>
 </head>
 <body>
 
@@ -13,19 +27,19 @@
     <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
     <ul class="nav-links">
       <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="stack.html">Stack</a></li>
       <li><a href="ferocitykk.html">FerocityKK</a></li>
-      <li><a href="eeveetc.html">eeveeTC</a></li>
       <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
     </ul>
   </nav>
 
   <div class="page-hero">
     <h1>V1STAX</h1>
-    <p class="tagline">Creator systems, AI tooling, and stream infrastructure — built by Ferocity.</p>
+    <p class="tagline">Creator systems, AI tooling, and self-hosted infrastructure — built by Ferocity.</p>
     <div class="hero-meta">
-      <div class="hero-pill"><div class="dot"></div> Atlas V2 Live</div>
+      <div class="hero-pill"><div class="dot"></div> Systems Online</div>
       <div class="hero-pill"><div class="dot warn"></div> Hermes Paper Trading</div>
-      <div class="hero-pill"><div class="dot"></div> eeveeTC Active</div>
+      <div class="hero-pill"><div class="dot"></div> PolyWhales Live</div>
     </div>
   </div>
 
@@ -45,22 +59,15 @@
         <div class="card">
           <span class="badge badge-wip">Paper Trading</span>
           <h3>Hermes</h3>
-          <p>Automated Kalshi prediction market trading bot. Momentum signals, EV filtering, SQLite logging, and a live dashboard.</p>
+          <p>Automated Kalshi prediction market trading bot. Momentum signals, EV filtering, SQLite logging, and a live dashboard. Scalper running 24/7.</p>
           <a href="polybot.html" class="card-link">View Project →</a>
         </div>
 
         <div class="card">
           <span class="badge badge-wip">Building</span>
           <h3>PolyWhales</h3>
-          <p>Real-time Polymarket whale tracker — streams on-chain trades from Polygon, scores wallets by win rate, and surfaces signals.</p>
-          <a href="https://github.com/Ferocitykk/polywhales" target="_blank" class="card-link">View Repo →</a>
-        </div>
-
-        <div class="card">
-          <span class="badge badge-planned">Planned</span>
-          <h3>Prometheus</h3>
-          <p>Claude-powered autonomous research and trade decision agent. Will consume signals from Hermes and PolyWhales when the Mac Mini arrives.</p>
-          <a href="#" class="card-link">Coming Soon →</a>
+          <p>Real-time Polymarket whale tracker. Streams on-chain trades from Polygon, scores wallets by win rate, and surfaces smart money signals.</p>
+          <a href="polywhales.html" class="card-link">View Project →</a>
         </div>
 
         <div class="card">
@@ -80,10 +87,39 @@
         <div class="card">
           <span class="badge badge-active">Active</span>
           <h3>Pi 4 Minecraft Server</h3>
-          <p>Headless Raspberry Pi 4 (8GB) running a self-hosted Minecraft server. The project that started it all — online since Jan 2025.</p>
+          <p>Headless Raspberry Pi 4 (8GB) running a self-hosted Minecraft server. Online since January 2025 — the project that started it all.</p>
           <a href="piserver.html" class="card-link">View Project →</a>
         </div>
 
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">Now Building</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Prometheus</h3>
+          <p>Claude-powered autonomous research and trade decision agent. Consumes signals from Hermes and PolyWhales for AI-driven trade calls. Waiting on the Mac Mini for full inference.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Incoming</span>
+          <h3>Mac Mini Node</h3>
+          <p>Dedicated AI inference node. Will run Ollama with local LLMs, take over Prometheus compute, and expand the homelab to three active nodes.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Hermes Live</h3>
+          <p>After a full month of paper trading data, Hermes flips to real money — scalper only, starting at $50–100, compounding toward hardware goals.</p>
+        </div>
+
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">Infrastructure</p>
+      <div class="info-block">
+        <h3>Self-Hosted on Local Hardware</h3>
+        <p>Everything runs on owned hardware at home — a Gigabyte Brix mini PC, a Raspberry Pi 4, and a Mac Mini on the way. No cloud compute bills. All services exposed via Cloudflare Tunnels with zero open ports. <a href="stack.html">View the full stack →</a></p>
       </div>
 
     </div>

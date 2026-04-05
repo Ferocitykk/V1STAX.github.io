@@ -3,47 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Polybot — V1STAX</title>
+  <title>Hermes — V1STAX</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="topnav">
-    <a href="index.html" class="nav-brand">V1STAX</a>
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
     <ul class="nav-links">
-      <li><a href="atlas.html">ATLAS</a></li>
-      <li><a href="polybot.html" class="active">Polybot</a></li>
-      <li><a href="piserver.html">Pi Server</a></li>
+      <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="eeveetc.html">eeveeTC</a></li>
       <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
     </ul>
   </nav>
 
   <div class="page-hero">
-    <h1>Polybot</h1>
-    <p class="tagline">Automated prediction market trading bot — momentum signals, paper trading, live PWA dashboard.</p>
+    <h1>Hermes</h1>
+    <p class="tagline">Automated Kalshi prediction market trading bot — momentum signals, EV filtering, and a live dashboard.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot warn"></div> Paper Trading — April 2026</div>
+      <div class="hero-pill"><div class="dot off"></div> Going Live: May 2026</div>
+    </div>
   </div>
 
   <main>
     <div class="container">
 
-      <p class="section-label">Overview</p>
-      <div class="info-block">
-        <h3>What is Polybot?</h3>
-        <p>Polybot monitors Kalshi prediction markets for momentum signals — price velocity, volume spikes, and spread tightening — and automatically places paper trades on Kalshi's demo environment. A live mobile dashboard tracks open positions and P&L in real time.</p>
+      <!-- Live Stats Widget -->
+      <p class="section-label">Live Stats <span id="liveIndicator" style="color:var(--yes);font-size:0.6rem;margin-left:8px;">● LIVE</span></p>
+      <div class="stats-strip" id="statsStrip">
+        <div class="stat-cell"><div class="val" id="statTrades">—</div><div class="lbl">Total Trades</div></div>
+        <div class="stat-cell"><div class="val" id="statPnl">—</div><div class="lbl">Net PnL</div></div>
+        <div class="stat-cell"><div class="val" id="statWR">—</div><div class="lbl">Win Rate</div></div>
+        <div class="stat-cell"><div class="val" id="statOpen">—</div><div class="lbl">Open Now</div></div>
       </div>
 
-      <p class="section-label" style="margin-top:2.5rem;">Current Phase</p>
+      <p class="section-label" style="margin-top:2.5rem;">Overview</p>
+      <div class="info-block">
+        <h3>What is Hermes?</h3>
+        <p>Hermes monitors Kalshi prediction markets for momentum signals — price velocity, volume spikes, spread tightening, and expected value filtering. It runs two strategies simultaneously: a 15-minute crypto scalper and a swing trader for sports and macro markets. Everything is logged to SQLite with a live mobile-friendly dashboard served over Cloudflare Tunnel.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Strategies</p>
       <div class="card-grid">
         <div class="card">
-          <span class="badge badge-wip">Phase 2</span>
-          <h3>Paper Trading</h3>
-          <p>Running on Kalshi's demo environment. Flat $10 stake per signal, max 5 open trades. Accumulating win rate data before going live.</p>
+          <span class="badge badge-active">Primary</span>
+          <h3>Crypto Scalper</h3>
+          <p>Trades 15-minute BTC, ETH, SOL, and XRP markets on Kalshi. Catches momentum on YES/NO price swings. Flat stake per signal, out within minutes. Most active overnight during Asian and European sessions.</p>
         </div>
         <div class="card">
-          <span class="badge badge-planned">Phase 3</span>
-          <h3>Live Trading</h3>
-          <p>Target: ~1 month of paper data. If results are positive, flip to real money at $1–2 stakes with tighter position limits.</p>
+          <span class="badge badge-wip">Secondary</span>
+          <h3>Swing Trader</h3>
+          <p>Longer-duration positions on sports and macro markets. Filtered by EV threshold — only trades when expected value clears a minimum edge. Max 6 open positions at a time.</p>
         </div>
       </div>
 
@@ -51,7 +64,7 @@
       <div class="card-grid">
         <div class="card">
           <h3>Price Velocity</h3>
-          <p>Detects rapid directional movement in contract prices as a momentum indicator.</p>
+          <p>Detects rapid directional movement in YES/NO contract prices as a primary momentum indicator.</p>
         </div>
         <div class="card">
           <h3>Volume Momentum</h3>
@@ -61,12 +74,38 @@
           <h3>Spread Tightening</h3>
           <p>Identifies markets where the bid/ask spread is compressing — a sign of increasing conviction.</p>
         </div>
+        <div class="card">
+          <h3>EV Filter</h3>
+          <p>Every signal is scored against a historical win rate database. Trades only fire when expected value clears a minimum threshold, blocking low-edge setups.</p>
+        </div>
       </div>
 
-      <p class="section-label" style="margin-top:2.5rem;">Dashboard</p>
-      <div class="info-block">
-        <h3>Live PWA</h3>
-        <p>Mobile-friendly progressive web app with three tabs: Live signals, Trade history, and Paper P&amp;L chart. Served via a Cloudflare Tunnel from local infrastructure — no cloud hosting required.</p>
+      <p class="section-label" style="margin-top:2.5rem;">Infrastructure</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-active">Running</span>
+          <h3>Gigabyte Brix — Arch Linux</h3>
+          <p>Running 24/7 as a headless server node. Systemd service auto-starts Hermes on boot with auto-restart on failure.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Dashboard</h3>
+          <p>Mobile-friendly PWA with live WebSocket updates. Scalper and swing tabs, P&amp;L charts, open positions, and signal log — accessible anywhere via Cloudflare Tunnel.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Roadmap</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-planned">May 2026</span>
+          <h3>Go Live</h3>
+          <p>After a full month of paper trading data, flip to real money. Starting at $50–100 with the scalper only — swing disabled until Prometheus is ready.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Prometheus Integration</h3>
+          <p>Claude-powered agent will consume Hermes signals alongside PolyWhales whale data for AI-driven trade decisions when the Mac Mini arrives.</p>
+        </div>
       </div>
 
       <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
@@ -76,8 +115,37 @@
 
   <footer>
     <span>V1STAX &mdash; Built by Ferocity</span>
-    <a href="https://github.com/V1STAX" target="_blank">GitHub Org →</a>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub →</a>
   </footer>
+
+  <script>
+    async function fetchStats() {
+      try {
+        const [scalp, swing] = await Promise.all([
+          fetch('https://hermes.ferocity.trade/api/scalper').then(r => r.json()),
+          fetch('https://hermes.ferocity.trade/api/swing').then(r => r.json()),
+        ]);
+        const totalTrades = (scalp.total || 0) + (swing.total || 0);
+        const totalPnl    = (parseFloat(scalp.total_pnl) || 0) + (parseFloat(swing.total_pnl) || 0);
+        const wins        = (scalp.wins || 0) + (swing.wins || 0);
+        const winRate     = totalTrades > 0 ? Math.round((wins / (totalTrades - (scalp.open||0) - (swing.open||0))) * 100) : 0;
+        const open        = (scalp.open || 0) + (swing.open || 0);
+
+        document.getElementById('statTrades').textContent = totalTrades;
+        document.getElementById('statPnl').textContent    = (totalPnl >= 0 ? '+' : '') + '$' + totalPnl.toFixed(2);
+        document.getElementById('statWR').textContent     = winRate + '%';
+        document.getElementById('statOpen').textContent   = open;
+
+        document.getElementById('statPnl').style.color = totalPnl >= 0 ? 'var(--yes)' : 'var(--no)';
+        document.getElementById('statWR').style.color  = winRate >= 60 ? 'var(--yes)' : winRate >= 50 ? 'var(--warn)' : 'var(--no)';
+        document.getElementById('liveIndicator').style.display = 'inline';
+      } catch(e) {
+        document.getElementById('liveIndicator').style.display = 'none';
+      }
+    }
+    fetchStats();
+    setInterval(fetchStats, 30000);
+  </script>
 
 </body>
 </html>

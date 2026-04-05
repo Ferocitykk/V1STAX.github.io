@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolyWhales — V1STAX</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="eeveetc.html">eeveeTC</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>PolyWhales</h1>
+    <p class="tagline">Real-time Polymarket whale tracker — streaming on-chain trades from Polygon and surfacing smart money signals.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot"></div> Live on Polygon</div>
+      <div class="hero-pill"><div class="dot off"></div> Sports Markets</div>
+      <div class="hero-pill"><div class="dot warn"></div> Building</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <p class="section-label">Overview</p>
+      <div class="info-block">
+        <h3>What is PolyWhales?</h3>
+        <p>PolyWhales connects directly to the Polygon blockchain via Alchemy WebSocket and streams every trade from Polymarket's CTF Exchange contracts in real time — no polling, no delay. It identifies high-performing wallets ("whales") by win rate and volume, then surfaces signals whenever smart money opens a new position in a sports market.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">How It Works</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>On-Chain Event Streaming</h3>
+          <p>Subscribes to <code>OrderFilled</code> events on both Polymarket CTF Exchange contracts via Alchemy WebSocket. Every trade hits the system the moment it's confirmed on Polygon.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Token Cache</h3>
+          <p>Maps 100k+ Polymarket outcome token IDs to human-readable market titles and outcomes. Refreshed every 10 minutes from the Polymarket API.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Wallet Scoring</h3>
+          <p>Every wallet that trades in sports markets gets scored by win rate, total volume, and recency. Top 50 wallets are flagged as tracked whales.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Signal Generation</h3>
+          <p>When a tracked whale opens a new position, a signal fires immediately. Signals include the market, direction, size, wallet score, and win rate.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Dashboard</p>
+      <div class="info-block">
+        <h3>Live Web UI</h3>
+        <p>Four-tab dashboard accessible at <a href="https://whales.ferocity.trade" target="_blank">whales.ferocity.trade</a> — Live Feed of whale trades, Signal log, Whale leaderboard ranked by score, and Markets overview showing where whales are positioned.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:2.5rem;">Roadmap</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Prometheus Integration</h3>
+          <p>PolyWhales exposes a <code>/api/signals/prometheus</code> endpoint ready for the Claude-powered Prometheus agent to consume and act on whale signals autonomously.</p>
+        </div>
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Expanded Markets</h3>
+          <p>Currently tracking sports markets. Full market expansion planned for when Prometheus takes over trade decisions.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/V1STAX" target="_blank">GitHub →</a>
+  </footer>
+
+</body>
+</html>
