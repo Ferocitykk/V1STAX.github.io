@@ -123,8 +123,8 @@
     async function fetchStats() {
       try {
         const [scalp, swing] = await Promise.all([
-          fetch('https://hermes.ferocity.trade/api/scalper').then(r => r.json()),
-          fetch('https://hermes.ferocity.trade/api/swing').then(r => r.json()),
+          fetch('https://ferocity.trade/api/scalper').then(r => r.json()),
+          fetch('https://ferocity.trade/api/swing').then(r => r.json()),
         ]);
         const totalTrades = (scalp.total || 0) + (swing.total || 0);
         const totalPnl    = (parseFloat(scalp.total_pnl) || 0) + (parseFloat(swing.total_pnl) || 0);
