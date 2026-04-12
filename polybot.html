@@ -44,7 +44,7 @@
       <p class="section-label" style="margin-top:2.5rem;">Overview</p>
       <div class="info-block">
         <h3>What is Hermes?</h3>
-        <p>Hermes monitors Kalshi prediction markets for momentum signals — price velocity, volume spikes, spread tightening, and expected value filtering. It runs two strategies simultaneously: a 15-minute crypto scalper and a swing trader for sports and macro markets. Everything is logged to SQLite with a live mobile-friendly dashboard served over Cloudflare Tunnel.</p>
+        <p>Hermes monitors Kalshi and Polymarket prediction markets for momentum signals — price velocity, volume spikes, spread tightening, and expected value filtering. It runs two strategies simultaneously: a 15-minute crypto scalper and a swing trader for sports and macro markets. Everything is logged to SQLite with a live WebSocket dashboard served over Cloudflare Tunnel.</p>
       </div>
 
       <p class="section-label" style="margin-top:2.5rem;">Strategies</p>
@@ -52,7 +52,7 @@
         <div class="card">
           <span class="badge badge-active">Primary</span>
           <h3>Crypto Scalper</h3>
-          <p>Trades 15-minute BTC, ETH, SOL, and XRP markets on Kalshi. Catches momentum on YES/NO price swings. Flat stake per signal, out within minutes. Most active overnight during Asian and European sessions.</p>
+          <p>Trades 15-minute BTC, ETH, SOL, XRP, and DOGE markets on Kalshi. Catches momentum on YES/NO price swings confirmed by live Binance candle data. Flat stake per signal, out within minutes. Most active overnight during Asian and European sessions.</p>
         </div>
         <div class="card">
           <span class="badge badge-wip">Secondary</span>
@@ -79,19 +79,31 @@
           <h3>EV Filter</h3>
           <p>Every signal is scored against a historical win rate database. Trades only fire when expected value clears a minimum threshold, blocking low-edge setups.</p>
         </div>
+        <div class="card">
+          <h3>Binance Candle Confirmation</h3>
+          <p>Before placing a scalper trade, Hermes pulls live 15m and 1h candles from Binance. A 2-of-3 majority across completed candles must agree with the Kalshi signal direction — mixed signals suppress the trade.</p>
+        </div>
+        <div class="card">
+          <h3>Per-Coin Win Rate Gate</h3>
+          <p>Each coin's last 15 trades are evaluated independently. If a coin's recent win rate falls below 40%, it's blocked until performance recovers — self-healing as new winners come in.</p>
+        </div>
+        <div class="card">
+          <h3>Per-Engine Circuit Breaker</h3>
+          <p>Scalper, swing, and paper engines each have independent circuit breakers. A losing streak on one engine won't lock down the others — isolation keeps all three running cleanly.</p>
+        </div>
       </div>
 
       <p class="section-label" style="margin-top:2.5rem;">Infrastructure</p>
       <div class="card-grid">
         <div class="card">
           <span class="badge badge-active">Running</span>
-          <h3>Gigabyte Brix — Arch Linux</h3>
-          <p>Running 24/7 as a headless server node. Systemd service auto-starts Hermes on boot with auto-restart on failure.</p>
+          <h3>Gigabyte Brix — Arch Linux + Hyprland</h3>
+          <p>Running 24/7 as the primary node. Systemd service auto-starts Hermes on boot with auto-restart on failure. Watchdog process monitors health and force-restarts on stall.</p>
         </div>
         <div class="card">
           <span class="badge badge-active">Live</span>
           <h3>Dashboard</h3>
-          <p>Mobile-friendly PWA with live WebSocket updates. Scalper and swing tabs, P&amp;L charts, open positions, and signal log — accessible anywhere via Cloudflare Tunnel.</p>
+          <p>Mobile-friendly PWA with live WebSocket updates. Scalper and swing tabs, combined P&amp;L/Balance/Overlay chart, open positions, signal log, and analytics — accessible anywhere via Cloudflare Tunnel.</p>
         </div>
       </div>
 
@@ -105,7 +117,7 @@
         <div class="card">
           <span class="badge badge-planned">Planned</span>
           <h3>Prometheus Integration</h3>
-          <p>Claude-powered agent will consume Hermes signals alongside PolyWhales whale data for AI-driven trade decisions when the Mac Mini arrives.</p>
+          <p>Ollama-powered autonomous agent will consume Hermes signals alongside PolyWhales whale data for AI-driven trade decisions when the Mac Mini arrives.</p>
         </div>
       </div>
 
