@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V1stax Chat — V1STAX</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="nav-brand">V1<span>STAX</span></a>
+    <ul class="nav-links">
+      <li><a href="atlas.html">Atlas</a></li>
+      <li><a href="v1stax-chat.html" class="active">Chat</a></li>
+      <li><a href="stack.html">Stack</a></li>
+      <li><a href="ferocitykk.html">FerocityKK</a></li>
+      <li><a href="https://github.com/V1STAX" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>V1stax Chat</h1>
+    <p class="tagline">Open-source, self-hostable community chat. No data collection. No paywalls. No corporate ownership.</p>
+    <div class="hero-meta">
+      <div class="hero-pill"><div class="dot"></div> Running on Brix</div>
+      <div class="hero-pill"><div class="dot warn"></div> v0.6.2-alpha</div>
+      <div class="hero-pill">AGPL-3.0</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <p class="section-label">Overview</p>
+      <div class="info-block">
+        <h3>Community chat that belongs to the community</h3>
+        <p>Existing platforms collect your data, lock features behind subscriptions, and make decisions that benefit shareholders over users. V1stax flips that model — you run it, you own it, and the AGPL license ensures no one can quietly take it private. Built on FastAPI, React 19, and SQLite with zero external service dependencies at runtime.</p>
+        <a href="https://github.com/Ferocitykk/v1stax-chat" class="card-link" target="_blank" style="font-size:0.82rem;">View on GitHub →</a>
+      </div>
+
+      <div class="stats-strip" style="margin-top:1.25rem;">
+        <div class="stat-cell"><div class="val">v0.6.2</div><div class="lbl">Alpha</div></div>
+        <div class="stat-cell"><div class="val">AGPL</div><div class="lbl">License</div></div>
+        <div class="stat-cell"><div class="val">0</div><div class="lbl">Telemetry</div></div>
+        <div class="stat-cell"><div class="val">SQLite</div><div class="lbl">Storage</div></div>
+        <div class="stat-cell"><div class="val">FastAPI</div><div class="lbl">Backend</div></div>
+        <div class="stat-cell"><div class="val">React 19</div><div class="lbl">Frontend</div></div>
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">Philosophy</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Privacy by Default</h3>
+          <p>No analytics, no telemetry, no fingerprinting. Registration requires only a Runner ID and password — email is optional, no real name, no phone number. Data minimization is architecture, not a setting.</p>
+        </div>
+
+        <div class="card">
+          <h3>No Paywalls. Ever.</h3>
+          <p>Chat is the product. Sending messages, creating nodes, inviting people, reading history — none of it will ever be gated. The software will never introduce artificial friction to push toward a paid plan.</p>
+        </div>
+
+        <div class="card">
+          <h3>Self-Hosted First</h3>
+          <p>A fully functional instance should run on a $5/month VPS with a single set of commands. Not a watered-down version — the full thing. No features that depend on external managed infrastructure.</p>
+        </div>
+
+        <div class="card">
+          <h3>Calm Interface</h3>
+          <p>V1stax is infrastructure software, not a social platform competing for attention. No notification counts designed to create anxiety, no engagement nudges. The UI feels like opening a tool — not walking into a casino.</p>
+        </div>
+
+        <div class="card">
+          <h3>Community Ownership</h3>
+          <p>This project doesn't belong to a founder, a company, or a VC. The AGPL license enforces this structurally — anyone who forks and hosts a modified version must also share their changes. You can't quietly take this private.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mobile First-Class</h3>
+          <p>A community chat that doesn't work on a phone isn't a community chat. Safe-area insets, no iOS auto-zoom, keyboard-aware layout, visible touch targets, swipe-panel navigation. Mobile breakage is a first-class bug.</p>
+        </div>
+
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">What's Shipped — v0.6.2-alpha</p>
+
+      <div class="info-block" style="margin-bottom:1.25rem;">
+        <h3>Communication</h3>
+        <p>Real-time WebSocket messaging with typing indicators and presence, 1:1 direct messages with unread badges, file and image attachments with inline previews, emoji reactions with live sync, markdown rendering, @mention highlighting, thread replies, message edit and delete, message search within a space, and pinned messages.</p>
+      </div>
+
+      <div class="info-block" style="margin-bottom:1.25rem;">
+        <h3>Spaces & Community</h3>
+        <p>Space categories and grouping, announcement spaces (read-only for Runners), full role system (owner, Fixer, Runner), member management with ban/kick/role assignment, multiple invite links per node, audit log for moderation event tracing, and opt-in public node listing.</p>
+      </div>
+
+      <div class="info-block" style="margin-bottom:1.25rem;">
+        <h3>Identity & Customization</h3>
+        <p>Custom avatar upload with crop UI, custom node icon and banner, user profile banner, username color picker (11 presets + custom hex), node accent color, user bio and status messages, custom emoji per node (PNG/GIF, up to 200), and profile card modals with DM button.</p>
+      </div>
+
+      <div class="info-block">
+        <h3>Design System</h3>
+        <p>Orbitron headers throughout, indigo/teal palette — <code>#6366f1</code> accent, <code>#2dd4bf</code> secondary, <code>#07090d</code> base. Square node icons with glow ring on active selection, inset left-border indicator on active space, dot-grid message background, EQ-bar typing animation, thin hairline border system, full SVG icon set. Nothing looks like Discord.</p>
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">Stack</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Backend</h3>
+          <p>Python 3.12, FastAPI, SQLite, WebSockets. No ORM migrations framework — schema changes run as idempotent <code>ALTER TABLE</code> statements on startup. No external services required at runtime.</p>
+        </div>
+
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>React 19, Vite, Axios. No state management library — state lives in <code>MainPage.jsx</code>. Shared WebSocket base hook with exponential backoff, ping/pong keepalive, and visibility-change reconnect for mobile Safari.</p>
+        </div>
+
+        <div class="card">
+          <h3>Auth</h3>
+          <p>JWT via python-jose, bcrypt via passlib. Rate limiting on all auth endpoints — sliding window in-memory limiter. Account recovery via encrypted recovery codes. No OAuth dependency, no email required.</p>
+        </div>
+
+        <div class="card">
+          <h3>Deployment</h3>
+          <p>Self-hosted on Brix (relay-node) inside a tmux session. Cloudflare Tunnel for public access. Mac Mini (core-node) handles dev and git orchestration. DeathAdder (forge-node) for builds and testing.</p>
+        </div>
+
+      </div>
+
+      <p class="section-label" style="margin-top:3rem;">What's Next</p>
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Group Chat</h3>
+          <p>Multi-party DMs — private group conversations not tied to a node. New conversation model supporting N participants with real-time delivery and a unified UI alongside 1:1 DMs.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>One-Click Deploy</h3>
+          <p>Docker Compose, Fly.io, Railway, and VPS guides so anyone can run a full instance in minutes — not just developers.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Webhooks & Bots</h3>
+          <p>Incoming and outgoing webhook support, plus bot account support for community automation without third-party platforms.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-planned">Planned</span>
+          <h3>Admin Dashboard</h3>
+          <p>Instance-level operator dashboard — user management, storage stats, connection counts, and health monitoring for self-hosters.</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:2.5rem;"><a href="index.html">← Back to V1STAX Hub</a></p>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>V1STAX &mdash; Built by Ferocity</span>
+    <a href="https://github.com/Ferocitykk/v1stax-chat" target="_blank">v1stax-chat on GitHub →</a>
+  </footer>
+
+</body>
+</html>
