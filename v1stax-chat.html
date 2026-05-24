@@ -26,7 +26,7 @@
     <p class="tagline">Open-source, self-hostable community chat. No data collection. No paywalls. No corporate ownership.</p>
     <div class="hero-meta">
       <div class="hero-pill"><div class="dot"></div> Self-Hostable</div>
-      <div class="hero-pill"><div class="dot warn"></div> v0.8.0-alpha</div>
+      <div class="hero-pill"><div class="dot warn"></div> v0.9.0-alpha</div>
       <div class="hero-pill">AGPL-3.0</div>
     </div>
   </div>
@@ -41,7 +41,7 @@
       </div>
 
       <div class="stats-strip" style="margin-top:1.25rem;">
-        <div class="stat-cell"><div class="val">v0.8.0</div><div class="lbl">Alpha</div></div>
+        <div class="stat-cell"><div class="val">v0.9.0</div><div class="lbl">Alpha</div></div>
         <div class="stat-cell"><div class="val">AGPL</div><div class="lbl">License</div></div>
         <div class="stat-cell"><div class="val">0</div><div class="lbl">Telemetry</div></div>
         <div class="stat-cell"><div class="val">SQLite</div><div class="lbl">Storage</div></div>
@@ -84,11 +84,16 @@
 
       </div>
 
-      <p class="section-label" style="margin-top:3rem;">What's Shipped — v0.8.0-alpha</p>
+      <p class="section-label" style="margin-top:3rem;">What's Shipped — v0.9.0-alpha</p>
+
+      <div class="info-block" style="margin-bottom:1.25rem;">
+        <h3>Voice</h3>
+        <p>WebRTC peer-to-peer voice channels built directly into nodes — no relay servers required on a LAN, STUN for NAT traversal when needed. Direct message voice calls with incoming ring tone, accept/decline modal, and automatic hang-up detection. AI noise suppression via RNNoise (WebAssembly) with per-user toggle, on by default. Individual microphone and speaker device selection, per-peer speaking indicators that light up avatars in real time, and a live call timer. Call records are inserted into DM history — completed calls show duration, missed calls are clearly labeled. A persistent call bar sits above the user panel in both sidebars so you always know you're in a call, no matter where you are in the app.</p>
+      </div>
 
       <div class="info-block" style="margin-bottom:1.25rem;">
         <h3>Communication</h3>
-        <p>Real-time WebSocket messaging with typing indicators and presence, 1:1 direct messages with unread badges, group DMs (up to 10 runners, optional name, history from join time), file and image attachments with inline previews in both spaces and DMs, emoji reactions with live sync, markdown rendering with syntax highlighting, @mention notifications with sound and browser push, inline message replies, message edit and delete, message search within a space and within DMs, pinned messages, browser notifications for mentions and DMs with context-aware copy (group name shown in group DM notifications), notification when added to a private space, and unread message dividers.</p>
+        <p>Real-time WebSocket messaging with typing indicators and presence, 1:1 direct messages with unread badges, group DMs (up to 10 runners, optional name, history from join time), friends system with friend requests and presence, file and image attachments with inline previews in both spaces and DMs, emoji reactions with live sync, markdown rendering with syntax highlighting, @mention notifications with sound and browser push, inline message replies, message edit and delete, message search within a space and within DMs, pinned messages, browser notifications for mentions and DMs with context-aware copy (group name shown in group DM notifications), notification when added to a private space, and unread message dividers.</p>
       </div>
 
       <div class="info-block" style="margin-bottom:1.25rem;">
@@ -142,8 +147,8 @@
 
         <div class="card">
           <span class="badge badge-planned">Planned</span>
-          <h3>Friends System</h3>
-          <p>Friend requests, friend list, and online presence within an instance. Surfaces DMs more naturally and lays the groundwork for cross-instance federation later.</p>
+          <h3>Screen Share</h3>
+          <p>Share your screen into an active voice channel — same WebRTC path, no additional infrastructure. Present, co-work, or watch together without leaving V1stax.</p>
         </div>
 
         <div class="card">
@@ -154,14 +159,14 @@
 
         <div class="card">
           <span class="badge badge-planned">Planned</span>
-          <h3>PWA Service Worker</h3>
-          <p>Offline support, background sync, and installable home screen presence on Android and iOS — turning V1stax into a true native-feeling app.</p>
+          <h3>Webhooks & Bots</h3>
+          <p>Incoming and outgoing webhook support, plus bot account support for community automation without third-party platforms.</p>
         </div>
 
         <div class="card">
           <span class="badge badge-planned">Planned</span>
-          <h3>Webhooks & Bots</h3>
-          <p>Incoming and outgoing webhook support, plus bot account support for community automation without third-party platforms.</p>
+          <h3>Video Calls</h3>
+          <p>Camera support in DM calls and voice channels — same peer-to-peer WebRTC stack, no new infrastructure. Opt-in per call.</p>
         </div>
 
         <div class="card">
