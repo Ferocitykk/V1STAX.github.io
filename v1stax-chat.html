@@ -54,84 +54,63 @@
 
         <div class="card">
           <h3>Privacy by Default</h3>
-          <p>No analytics, no telemetry, no fingerprinting. Registration requires only a Runner ID and password — email is optional, no real name, no phone number. Data minimization is architecture, not a setting.</p>
+          <p>No analytics, no telemetry, no fingerprinting. A username and password is all registration requires. Data minimization is architecture, not a setting.</p>
         </div>
 
         <div class="card">
           <h3>No Paywalls. Ever.</h3>
-          <p>Chat is the product. Sending messages, creating nodes, inviting people, reading history — none of it will ever be gated. The software will never introduce artificial friction to push toward a paid plan.</p>
-        </div>
-
-        <div class="card">
-          <h3>Self-Hosted First</h3>
-          <p>A fully functional instance should run on a $5/month VPS with a single set of commands. Not a watered-down version — the full thing. No features that depend on external managed infrastructure.</p>
-        </div>
-
-        <div class="card">
-          <h3>Calm Interface</h3>
-          <p>V1stax is infrastructure software, not a social platform competing for attention. No notification counts designed to create anxiety, no engagement nudges. The UI feels like opening a tool — not walking into a casino.</p>
+          <p>Messaging, nodes, invites, history — none of it gated. The software will never introduce friction designed to push you toward a paid plan.</p>
         </div>
 
         <div class="card">
           <h3>Indie Ownership</h3>
-          <p>V1stax is built and owned by one person — not a company, not a VC, not a board. The AGPL license enforces this structurally: anyone who forks and hosts a modified version must share their changes. You can't quietly take this private.</p>
+          <p>Built and owned by one person — not a company, not a VC. The AGPL license means anyone hosting a modified version must share their changes. You can't quietly take this private.</p>
         </div>
 
         <div class="card">
-          <h3>Mobile First-Class</h3>
-          <p>A community chat that doesn't work on a phone isn't a community chat. Safe-area insets, no iOS auto-zoom, keyboard-aware layout, visible touch targets, swipe-panel navigation. Mobile breakage is a first-class bug.</p>
+          <h3>Calm Interface</h3>
+          <p>Infrastructure software, not a platform competing for attention. No engagement nudges, no anxiety-inducing counts. The UI feels like opening a tool — not walking into a casino.</p>
         </div>
 
       </div>
 
-      <p class="section-label" style="margin-top:3rem;">What's Shipped — v0.17.5-alpha</p>
-
-      <div class="info-block" style="margin-bottom:1.25rem;">
-        <h3>Voice & Screen Share</h3>
-        <p>WebRTC peer-to-peer voice channels built directly into nodes — no relay servers required on a LAN, STUN/TURN for NAT traversal when needed. Screen sharing into any active voice channel with system or tab audio capture — no additional infrastructure, same peer-to-peer path. Dedicated voice channel view shows all participants and screen share tiles in one place; sharer sees their own greyed preview so they always know they're sharing; uniform tile heights; auto picture-in-picture when navigating away from a voice channel during an active share. Direct message voice calls with incoming ring tone, accept/decline modal, and automatic hang-up detection. AI noise suppression via RNNoise (WebAssembly) with per-user toggle, on by default. Individual microphone and speaker device selection, per-peer speaking indicators that light up avatars in real time, and a live call timer. Call records are inserted into DM history — completed calls show duration, missed calls are clearly labeled. A persistent call bar sits above the user panel in both sidebars so you always know you're in a call, no matter where you are in the app.</p>
-      </div>
-
-      <div class="info-block" style="margin-bottom:1.25rem;">
-        <h3>Communication</h3>
-        <p>Real-time WebSocket messaging with typing indicators and presence, 1:1 direct messages with unread badges, group DMs (up to 10 runners, optional name, history from join time), friends system with friend requests and presence, file and image attachments with inline previews in both spaces and DMs, emoji reactions with live sync, markdown rendering with syntax highlighting, @mention notifications with sound and browser push, inline message replies, message edit and delete, message search within a space and within DMs, pinned messages, browser notifications for mentions and DMs with context-aware copy (group name shown in group DM notifications), notification when added to a private space, and unread message dividers.</p>
-      </div>
-
-      <div class="info-block" style="margin-bottom:1.25rem;">
-        <h3>Spaces & Community</h3>
-        <p>Space categories with drag-to-reorder, spaces draggable between categories, announcement spaces, private spaces with individual member invites, private categories that hide entire sections, custom roles with granular permission controls (manage node, manage spaces, manage roles, see private spaces, kick/ban, manage messages), role color assignment with no-color option (lets runner's personal name color show through), role drag-to-reorder, per-member role assignment, two-tier base roles (Owner, Runner) with all elevated access via custom roles, member management with ban/kick, multiple invite links per node, audit log, and opt-in public node listing.</p>
-      </div>
-
-      <div class="info-block" style="margin-bottom:1.25rem;">
-        <h3>Identity & Customization</h3>
-        <p>Custom avatar upload with crop UI, custom node icon and banner, user profile banner, username color picker (11 presets + custom hex), node accent color, user bio and status messages, custom emoji per node (PNG/GIF, up to 200), and profile card modals with DM button.</p>
-      </div>
-
-      <div class="info-block" style="margin-bottom:1.25rem;">
-        <h3>Instance Administration</h3>
-        <p>Instance admin role with gated operator dashboard, node registry with per-node storage tracking, suspend/restore and invite controls, instance-wide stats (uptime, connections, storage, max upload size), registered user list with online status and instance-level suspension, and audit log entries for all instance-level actions. First registered user is automatically bootstrapped as instance admin. Security hardening: magic-bytes file validation, rate limiting on uploads and DM creation, automated nightly SQLite backups with 7-day rotation, JWT 1-hour expiry with proactive refresh, and account deletion with cascade or ownership transfer.</p>
-      </div>
-
-      <div class="info-block">
-        <h3>Design System</h3>
-        <p>Orbitron headers throughout, indigo/teal palette — <code>#6366f1</code> accent, <code>#2dd4bf</code> secondary, <code>#07090d</code> base. Square node icons with glow ring on active selection, inset left-border indicator on active space, dot-grid message background, EQ-bar typing animation, thin hairline border system, full SVG icon set. Nothing looks like Discord.</p>
-      </div>
-
-      <p class="section-label" style="margin-top:3rem;">Stack</p>
+      <p class="section-label" style="margin-top:3rem;">Features</p>
       <div class="card-grid">
 
         <div class="card">
-          <h3>Backend</h3>
-          <p>Python 3.12, FastAPI, SQLite, WebSockets. No ORM migrations framework — schema changes run as idempotent <code>ALTER TABLE</code> statements on startup. No external services required at runtime.</p>
+          <span class="badge badge-active">Live</span>
+          <h3>Voice & Video</h3>
+          <p>P2P voice channels, camera, screen sharing with system audio, and 1:1 DM calls with ring flow. AI noise suppression via RNNoise on every call. Auto picture-in-picture when switching spaces.</p>
         </div>
 
         <div class="card">
-          <h3>Frontend</h3>
-          <p>React 19, Vite, Axios. No state management library — state lives in <code>MainPage.jsx</code>. Shared WebSocket base hook with exponential backoff, ping/pong keepalive, and visibility-change reconnect for mobile Safari.</p>
+          <span class="badge badge-active">Live</span>
+          <h3>Messaging</h3>
+          <p>Real-time text, group DMs, inline replies, link previews, emoji reactions, markdown, file and image attachments, @mentions, message search, threads, and pinned messages.</p>
         </div>
 
         <div class="card">
-          <h3>Auth</h3>
-          <p>JWT via python-jose, bcrypt via passlib. Rate limiting on all auth endpoints — sliding window in-memory limiter. Account recovery via encrypted recovery codes. No OAuth dependency, no email required.</p>
+          <span class="badge badge-active">Live</span>
+          <h3>Community</h3>
+          <p>Custom roles with granular permissions, private spaces and categories, announcement spaces, friends system, audit log, multiple invite links, and an instance admin panel.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Identity</h3>
+          <p>Avatars, banners, custom emoji packs (up to 200, GIF/PNG), username colors, node accent themes, presence modes, bio, status messages, and profile cards.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Deploy Anywhere</h3>
+          <p>Single <code>docker compose up</code> gets you running. Installable PWA, native desktop app for Windows, macOS, and Linux, and automated nightly backups included.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-active">Live</span>
+          <h3>Federation</h3>
+          <p>Connect across self-hosted V1stax instances. Cross-instance DMs, node joining via invite, and federated discovery — all signed with Ed25519. Opt-in per instance.</p>
         </div>
 
       </div>
